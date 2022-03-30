@@ -100,8 +100,8 @@ int solve( Node* root)
     if(root==NULL)return 0;
     int l=solve(root->left);
     int r=solve(root->right);
-    maxi=max(maxi,1+l+r);
-    return 1+ max(l,r);
+    maxi=max(maxi,l+r+1);
+    return  max(l,r)+1;
 }
 
     int diameter(Node* root) {
