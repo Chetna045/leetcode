@@ -8,12 +8,12 @@ public:
     {
         for(int j=i-1;j>=0;j--)
         {
-            if(dp[j])
+            if(dp[j])//if starting pos is true of word
             {
                 string word=s.substr(j,i-j);
                 if(find(wordDict.begin(),wordDict.end(),word)!=wordDict.end())
                 {
-                    dp[i]=true;
+                    dp[i]=true;//marks the pos after ending of word as true
                     break;
                 }
             }
